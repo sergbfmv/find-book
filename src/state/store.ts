@@ -10,6 +10,7 @@ const rootReducer = combineReducers({
   books: booksReducer,
 })
 
+// @ts-ignore
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk))
 // определить автоматически тип всего объекта состояния
 export type AppRootStateType = ReturnType<typeof rootReducer>
