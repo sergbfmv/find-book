@@ -10,10 +10,21 @@ const instance = axios.create({
 })
 
 export const booksAPI = {
-  getBooks: (query: string) => {
+  getBooks: (query: string, selectedCategory: string, sort: string) => {
     return instance.get('/?', {
       params: {
+        orderBy: sort,
         q: query,
+        subject: selectedCategory === 'all' ? '' : selectedCategory,
+      },
+    })
+  },
+  loadBooks: (query: string, page: number) => {
+    return instance.get('/?', {
+      params: {
+        maxResults: 30,
+        q: query,
+        startIndex: (page - 1) * 30,
       },
     })
   },

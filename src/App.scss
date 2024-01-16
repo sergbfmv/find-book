@@ -16,7 +16,8 @@
   display: flex;
   justify-content: space-between;
 
-  max-width: 380px;
+  width: 560px;
+  height: 360px;
   margin: 16px;
   padding: 16px;
 
@@ -32,3 +33,19 @@
   }
 }
 
+.booksList {
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.largeImg {
+  width: 360px;
+  height: 500px;
+}
+
+.bookWrapper {
+  display: flex;
+  gap: 30px;
+}

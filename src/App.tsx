@@ -12,7 +12,7 @@ function App() {
       <h1>Book Search App</h1>
       <Routes>
         <Route element={<SearchBooks />} path={'/'} />
-        <Route element={<Book />} path={'/book'} />
+        <Route element={<Book />} path={'/book/:id'} />
       </Routes>
     </div>
   )
