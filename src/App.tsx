@@ -11,7 +11,7 @@ function App() {
     <div className={'app'}>
       <h1>Book Search App</h1>
       <Routes>
-        <Route element={<SearchBooks />} path={'/'} />
+        <Route element={<SearchBooks />} path={'/find-book'} />
         <Route element={<Book />} path={'/book/:id'} />
       </Routes>
     </div>

@@ -47,6 +47,7 @@ export const searchBooks = (title: string, category: string, sort: string) => {
       const res = await booksAPI.getBooks(title, category, sort)
 
       dispatch(setBooks(res.data))
+      dispatch(setError(''))
     } catch (error: unknown) {
       if (error instanceof Error) {
         dispatch(setError(error.message))
