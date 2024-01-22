@@ -15,7 +15,7 @@ export const booksAPI = {
       params: {
         orderBy: sort,
         q: query,
-        subject: selectedCategory !== 'all' ? selectedCategory : undefined,
+        subject: selectedCategory !== 'all' ? selectedCategory : '',
       },
     })
   },

@@ -58,7 +58,7 @@ const SearchBooks = () => {
 
       {books.error && <p style={{ color: 'red' }}>Error: {books.error}</p>}
 
-      {books.items.length > 0 && (
+      {books?.items && books.items.length > 0 ? (
         <div>
           <p>Found {books.totalItems} books</p>
           <div className={'booksList'}>
@@ -67,6 +67,8 @@ const SearchBooks = () => {
             ))}
           </div>
         </div>
+      ) : (
+        <p>No books found.</p>
       )}
       <button onClick={handleLoadMore}>Load more</button>
     </div>
